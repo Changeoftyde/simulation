@@ -1,0 +1,26 @@
+<div class="grass">
+  <img class="grassImg" id="grassImg" src="IMG_7990.png">
+</div>
+
+<style>
+  .grassImg {
+    width: 1000vh;
+    height: auto;
+    position: absolute;
+  }
+  .grass {
+    width: 30vh;
+    height: 30vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: (50%, 50%);
+    clip-path: circle(50%);
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  document.getElementById("grassImg").style.top = 50 + Math.random() * 950 + "vh";
+  document.getElementById("grassImg").style.left = 50 + Math.random() * 950 + "vh";
+</script>
