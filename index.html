@@ -56,8 +56,8 @@
   left = Math.random() * -160 + "vh";
   document.getElementById("grassImg").style.top = top;
   document.getElementById("grassImg").style.left = left;
-  document.getElementById("testCan").style.top = top;
-  document.getElementById("testCan").style.left = left;
+  document.getElementById("testCan").style.top = window.innerHeight * top / 10;
+  document.getElementById("testCan").style.left = window.innerHeight * left / 10;
   document.getElementById("testCan").width = window.innerHeight * 2;
   document.getElementById("testCan").height = window.innerHeight * 2;
   document.getElementById("testCan").style.width = window.innerHeight * 2 + "px";
@@ -67,7 +67,9 @@
   img = document.getElementById("ref");
   ctx.drawImage(img, 0, 0, c.width, c.height);
   function findSpawnPoint() {
-    totalLeftOffset = top / 10 * window.innerHeight;
+    totalTopOffset = top / 10 * window.innerHeight + Math.round(Math.random() * 40);
+    totalLeftOffset = left / 10 * window.innerHeight + Math.round(Math.random() * 40);
+    
   }
 </script>
 </body>
