@@ -1,11 +1,19 @@
 <html>
 <body>
 <div class="grass">
-  <img class="grassImg" id="grassImg" src="IMG_7990.png">
+  <img class="grassImg" id="grassImg" src="IMG_7993.png">
+  <canvas class="testCan" id="testCan" >Your browser does not support the HTML canvas tag.</canvas>
 </div>
 
 
 <style>
+  .testCan {
+    width: 200vh;
+    heigt: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .grassImg {
     width: 200vh;
     height: auto;
@@ -32,8 +40,12 @@
 </style>
 
 <script>
-  document.getElementById("grassImg").style.top = Math.random() * -160 + "vh";
-  document.getElementById("grassImg").style.left = Math.random() * -160 + "vh";
+  top = Math.random() * -160 + "vh";
+  left = Math.random() * -160 + "vh";
+  document.getElementById("grassImg").style.top = top;
+  document.getElementById("grassImg").style.left = left;
+  document.getElementById("testCan").style.top = top;
+  document.getElementById("testCan").style.left = left;
 </script>
 </body>
 </html>
