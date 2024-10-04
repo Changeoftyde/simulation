@@ -75,7 +75,7 @@
       Sptop = 15 + Math.round(Math.random() * 40);
       sp.style.left = Spleft + "%";
       sp.style.top = Sptop + "%";
-      imgData = ctx.getImageData(top + Sptop, left + Spleft * (window.innerHeight / window.innerWidth), 1, 1);
+      imgData = ctx.getImageData(top + Sptop, left + Spleft * (window.innerWidth / window.innerHeight), 1, 1);
       black = imgData[0] + imgData[1] + imgData[2];
     }
   }
