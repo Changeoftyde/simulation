@@ -68,8 +68,8 @@
     Sptop = 15 + Math.round(Math.random() * 40);
     sp.style.left = Spleft + "%";
     sp.style.top = Sptop + "%";
-    cWid = c.getBoundingClientRect.width;
-    cHei = c.getBoundingClientRect.height;
+    cWid = c.getBoundingClientRect().width;
+    cHei = c.getBoundingClientRect().height;
     imgData = ctx.getImageData(cWid * ((top * -1 + Sptop) / 200), cHei * ((left * -1 + Spleft) / 200), 1, 1);
     alpha = imgData[3];
     while (alpha != 255) {
