@@ -4,12 +4,19 @@
 <body>
 <img src="IMG_7994.png" height="0" width="0" id="ref">
 <div class="grass">
+  <img class="spawnpoint" src="IMG_7996.png">
   <img class="grassImg" id="grassImg" src="IMG_7993.png">
   <canvas class="testCan" id="testCan" >Your browser does not support the HTML canvas tag.</canvas>
 </div>
 
 
 <style>
+  .spawnpoint {
+    width: 1vh;
+    height: auto;
+    position: absolute;
+    z-index: 4;
+  }
   .testCan {
     width: 200vh;
     heigt: auto;
@@ -55,6 +62,14 @@
   ctx = c.getContext("2d");
   img = document.getElementById("ref");
   ctx.drawImage(img, 0, 0, c.width, c.width * (4102 / 3973));
+  function findSpawnPoint() {
+    sp = document.getElementsByClassName("spawnpoint")[0];
+    Spleft = 30 + Math.round(Math.random() * 40) + "%";
+    Sptop = 15 + Math.round(Math.random() * 40) + "%";
+    sp.style.left = Spleft;
+    sp.style.top = Sptop;
+    ctx.getImageData(top + Sptop, left + Spleft * (window.innerHeight / window.innerWidth), 1, 1);
+  }
 </script>
 </body>
 </html>
