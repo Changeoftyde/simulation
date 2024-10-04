@@ -58,32 +58,14 @@
   document.getElementById("grassImg").style.left = left;
   document.getElementById("testCan").style.top = top;
   document.getElementById("testCan").style.left = left;
-  document.getElementById("testCan").style.width = window.innerHeight * 2;
-  document.getElementById("testCan").style.height = window.innerHeight * 2;
+  document.getElementById("testCan").style.width = window.innerHeight * 2 + "px";
+  document.getElementById("testCan").style.height = window.innerHeight * 2 + "px";
   c = document.getElementById("testCan");
   ctx = c.getContext("2d");
   img = document.getElementById("ref");
   ctx.drawImage(img, 0, 0, c.width, c.height);
   function findSpawnPoint() {
-    sp = document.getElementsByClassName("spawnpoint")[0];
-    Spleft = 30 + Math.round(Math.random() * 40);
-    Sptop = 15 + Math.round(Math.random() * 40);
-    sp.style.left = Spleft + "%";
-    sp.style.top = Sptop + "%";
-    cWid = c.getBoundingClientRect().width;
-    cHei = c.getBoundingClientRect().height;
-    imgData = ctx.getImageData(cWid * ((top * -1 + Sptop) / 200), cHei * ((left * -1 + Spleft) / 200), 1, 1);
-    alpha = imgData[3];
-    while (alpha != 255) {
-      Spleft = 30 + Math.round(Math.random() * 40);
-      Sptop = 15 + Math.round(Math.random() * 40);
-      sp.style.left = Spleft + "%";
-      sp.style.top = Sptop + "%";
-      cWid = c.getBoundingClientRect.width;
-      cHei = c.getBoundingClientRect.height;
-      imgData = ctx.getImageData(cWid * ((top * -1 + Sptop) / 200), cHei * ((left * -1 + Spleft) / 200), 1, 1);
-      alpha = imgData[3];
-    }
+    
   }
 </script>
 </body>
