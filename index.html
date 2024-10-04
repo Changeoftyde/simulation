@@ -58,6 +58,8 @@
   document.getElementById("grassImg").style.left = left;
   document.getElementById("testCan").style.top = top;
   document.getElementById("testCan").style.left = left;
+  document.getElementById("testCan").width = window.innerHeight * 2;
+  document.getElementById("testCan").height = window.innerHeight * 2;
   document.getElementById("testCan").style.width = window.innerHeight * 2 + "px";
   document.getElementById("testCan").style.height = window.innerHeight * 2 + "px";
   c = document.getElementById("testCan");
@@ -65,7 +67,7 @@
   img = document.getElementById("ref");
   ctx.drawImage(img, 0, 0, c.width, c.height);
   function findSpawnPoint() {
-    
+    totalLeftOffset = top / 10 * window.innerHeight;
   }
 </script>
 </body>
