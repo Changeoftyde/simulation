@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 <body>
 <img src="IMG_7994.png" height="0" width="0" id="ref">
@@ -50,7 +52,7 @@
   c = document.getElementById("testCan");
   ctx = c.getContext("2d");
   img = document.getElementById("ref");
-  ctx.drawImage(img, 0, 0, c.width, c.height);
+  ctx.drawImage(img, 0, 0, window.innerWidth * 0.4, window.innerHeight * 0.4);
 </script>
 </body>
 </html>
