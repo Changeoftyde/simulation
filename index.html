@@ -1,5 +1,6 @@
 <html>
 <body>
+<img src="IMG_7994.png" height="0" width="0" id="ref">
 <div class="grass">
   <img class="grassImg" id="grassImg" src="IMG_7993.png">
   <canvas class="testCan" id="testCan" >Your browser does not support the HTML canvas tag.</canvas>
@@ -46,6 +47,10 @@
   document.getElementById("grassImg").style.left = left;
   document.getElementById("testCan").style.top = top;
   document.getElementById("testCan").style.left = left;
+  c = document.getElementById("testCan");
+  ctx = c.getContext("2d");
+  img = document.getElementById("ref");
+  ctx.drawImage(img, 0, 0, c.width, c.height);
 </script>
 </body>
 </html>
