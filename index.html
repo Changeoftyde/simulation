@@ -69,14 +69,14 @@
     sp.style.left = Spleft + "%";
     sp.style.top = Sptop + "%";
     imgData = ctx.getImageData((top * -1) - Sptop, (left * -1) - Spleft * (window.innerHeight / window.innerWidth), 1, 1);
-    black = imgData[0] + imgData[1] + imgData[2];
-    while (black != 0) {
+    alpha = imgData[3];
+    while (alpha == 0) {
       Spleft = 30 + Math.round(Math.random() * 40);
       Sptop = 15 + Math.round(Math.random() * 40);
       sp.style.left = Spleft + "%";
       sp.style.top = Sptop + "%";
       imgData = ctx.getImageData((top * -1)+ Sptop, (left * -1) + Spleft * (window.innerWidth / window.innerHeight), 1, 1);
-      black = imgData[0] + imgData[1] + imgData[2];
+      alpha = imgData[3];
     }
   }
 </script>
