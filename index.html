@@ -52,12 +52,12 @@
 </style>
 
 <script>
-  top = Math.random() * -160 + "vh";
-  left = Math.random() * -160 + "vh";
-  document.getElementById("grassImg").style.top = top;
-  document.getElementById("grassImg").style.left = left;
-  document.getElementById("testCan").style.top = top;
-  document.getElementById("testCan").style.left = left;
+  top = Math.random() * -160;
+  left = Math.random() * -160;
+  document.getElementById("grassImg").style.top = top + "vh";
+  document.getElementById("grassImg").style.left = left + "vh";
+  document.getElementById("testCan").style.top = top + "vh";
+  document.getElementById("testCan").style.left = left + "vh";
   document.getElementById("testCan").width = window.innerHeight * 2;
   document.getElementById("testCan").height = window.innerHeight * 2;
   document.getElementById("testCan").style.width = window.innerHeight * 2 + "px";
