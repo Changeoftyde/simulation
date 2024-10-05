@@ -52,7 +52,7 @@
 </style>
 
 <script>
-  top = Math.random() * -160;
+  topA = Math.random() * -160;
   left = Math.random() * -160;
   document.getElementById("grassImg").style.top = top + "vh";
   document.getElementById("grassImg").style.left = left + "vh";
@@ -67,10 +67,9 @@
   img = document.getElementById("ref");
   ctx.drawImage(img, 0, 0, c.style.width, c.style.height);
   function findSpawnPoint() {
-  try {
   alpha = 0;
   while (alpha != 255) {
-    totalTopOffset = Math.round((top * -1 + Math.round(Math.random() * 40)) / 100 * window.innerHeight);
+    totalTopOffset = Math.round((topA * -1 + Math.round(Math.random() * 40)) / 100 * window.innerHeight);
     totalLeftOffset = Math.round((left * -1 + Math.round(Math.random() * 40)) / 100 * window.innerHeight);
     alpha = 0;
     imgData = ctx.getImageData(totalLeftOffset, totalTopOffset, 4, 4);
@@ -79,9 +78,8 @@
     }
     alpha = alpha / 4;
     }
-  document.getElementById("spawnpoint").style.top = (0.15 + totalTopOffset - (top / -100 * window.innerHeight)) * window.innerHeight + "px";
+  document.getElementById("spawnpoint").style.top = (0.15 + totalTopOffset - (topA / -100 * window.innerHeight)) * window.innerHeight + "px";
   document.getElementById("spawnpoint").style.left = (0.3 + totalLeftOffset - (left / -100 * window.innerHeight)) * window.innerHeight + "px";
-  } catch(err) { alert(err); }
   }
 </script>
 </body>
