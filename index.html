@@ -73,10 +73,10 @@
     totalLeftOffset = Math.round((left * -1 + Math.round(Math.random() * 40)) / 100 * window.innerHeight);
     alpha = 0;
     imgData = ctx.getImageData(totalLeftOffset, totalTopOffset, 4, 4);
-    for (i = 1; i < 5; i++) {
+    for (i = 1; i < 17; i++) {
       alpha += imgData[4 * i - 1];
     }
-    alpha = alpha / 4;
+    alpha = alpha / 16;
     }
   document.getElementById("spawnpoint").style.top = (0.15 + totalTopOffset - (topA / -100 * window.innerHeight)) * window.innerHeight + "px";
   document.getElementById("spawnpoint").style.left = (0.3 + totalLeftOffset - (left / -100 * window.innerHeight)) * window.innerHeight + "px";
