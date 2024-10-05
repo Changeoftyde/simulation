@@ -73,12 +73,9 @@
     alpha = 0;
     imgData = ctx.getImageData(totalLeftOffset, totalTopOffset, 4, 4);
     for (i = 1; i < 17; i++) {
-      alpha += imgData[4 * i - 1];
-      alert(alpha);
-      alert(totalLeftOffset);
-      alert(c.style.width);
-      alert(totalTopOffset);
-      alert(c.style.height);
+      alpha += imgData[(4 * i) - 1];
+      alert(totalTopOffset < c.height);
+      alert(totalLeftOffset < c.width);
     }
     alpha = alpha / 16;
   }
