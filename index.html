@@ -75,6 +75,7 @@
     imgData = ctx.getImageData(totalLeftOffset, totalTopOffset, 4, 4);
     for (i = 1; i < 17; i++) {
       alpha += imgData[4 * i - 1];
+      alert(alpha);
     }
     alpha = alpha / 16;
     }
