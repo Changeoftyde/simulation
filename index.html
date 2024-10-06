@@ -3,8 +3,8 @@
 <html>
 <body onload="onload()">
 <img src="IMG_7994.png" height="0" width="0" id="ref">
+<img id="spawnpoint" class="spawnpoint" src="IMG_7996.png">
 <div class="grass">
-  <img id="spawnpoint" class="spawnpoint" src="IMG_7996.png">
   <img class="grassImg" id="grassImg" src="IMG_7993.png">
   <canvas class="testCan" id="testCan" >Your browser does not support the HTML canvas tag.</canvas>
 </div>
@@ -78,8 +78,7 @@
     totalTopOffset = Math.round((topA * -1 + rT) / 100 * window.innerHeight);
     totalLeftOffset = Math.round((left * -1 + rL) / 100 * window.innerHeight);
     alpha = 0;
-    imgData = ctx.getImageData(totalLeftOffset, totalTopOffset, 4, 4);
-    alert(imgData.data);
+    imgData = ctx.getImageData(totalLeftOffset, totalTopOffset, 4, 4)
     for (i = 0; i < 16; i++) {
       alpha += imgData.data[(4 * i) + 3];
     }
