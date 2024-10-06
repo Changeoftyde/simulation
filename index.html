@@ -66,8 +66,8 @@
   c = document.getElementById("testCan");
   ctx = c.getContext("2d");
   img = document.getElementById("ref");
-  ctx.drawImage(img, 0, 0, c.width, c.height);
   function onload() {
+  ctx.drawImage(img, 0, 0, c.width, c.height);
   setTimeout(function() {
   alpha = 0;
   while (alpha != 255) {
