@@ -73,9 +73,9 @@
     totalLeftOffset = Math.round((left * -1 + Math.round(Math.random() * 40)) / 100 * window.innerHeight);
     alpha = 0;
     imgData = ctx.getImageData(totalLeftOffset, totalTopOffset, 4, 4);
+    alert(imgData);
     for (i = 0; i < 16; i++) {
       alpha += imgData[(4 * i) + 3];
-      alert(imgData[(4 * i) + 3]);
     }
     alpha = alpha / 16;
   }
