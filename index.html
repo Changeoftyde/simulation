@@ -67,6 +67,7 @@
   img = document.getElementById("ref");
   ctx.drawImage(img, 0, 0, c.style.width, c.style.height);
   function onload() {
+  setTimeout(function() {
   alpha = 0;
   while (alpha != 255) {
     totalTopOffset = Math.round((topA * -1 + Math.round(Math.random() * 40)) / 100 * window.innerHeight);
@@ -81,6 +82,7 @@
   }
   document.getElementById("spawnpoint").style.top = (0.15 + totalTopOffset - (topA / -100 * window.innerHeight)) * window.innerHeight + "px";
   document.getElementById("spawnpoint").style.left = (0.3 + totalLeftOffset - (left / -100 * window.innerHeight)) * window.innerHeight + "px";
+  }, 1000);
   }
 </script>
 </body>
