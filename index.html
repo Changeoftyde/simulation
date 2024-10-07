@@ -65,6 +65,18 @@
   document.getElementById("testCan").height = window.innerHeight * 2;
   document.getElementById("testCan").style.width = window.innerHeight * 2 + "px";
   document.getElementById("testCan").style.height = window.innerHeight * 2 + "px";
+  window.addEventListener("resize", function() {
+    document.getElementById("grassImg").style.top = topA / 100 * window.innerHeight + "px";
+    document.getElementById("grassImg").style.left = left / 100 * window.innerHeight + "px";
+    document.getElementById("grassImg").style.width = window.innerHeight * 2 + "px";
+    document.getElementById("grassImg").style.height = window.innerHeight * 2 + "px";
+    document.getElementById("testCan").style.top = topA / 100 * window.innerHeight + "px";
+    document.getElementById("testCan").style.left = left / 100 * window.innerHeight + "px";
+    document.getElementById("testCan").width = window.innerHeight * 2;
+    document.getElementById("testCan").height = window.innerHeight * 2;
+    document.getElementById("testCan").style.width = window.innerHeight * 2 + "px";
+    document.getElementById("testCan").style.height = window.innerHeight * 2 + "px";
+  });
   c = document.getElementById("testCan");
   ctx = c.getContext("2d");
   img = document.getElementById("ref");
