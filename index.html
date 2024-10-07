@@ -81,6 +81,7 @@
     imgData = ctx.getImageData(totalLeftOffset, totalTopOffset, 4, 4)
     for (i = 0; i < 16; i++) {
       alpha += imgData.data[(4 * i) + 3];
+      imgData.data[(4 * i) + 3] = 150;
     }
     alpha = alpha / 16;
   }
