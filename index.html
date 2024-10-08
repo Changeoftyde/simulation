@@ -109,7 +109,7 @@
   setTimeout(function() {
   alpha = 0;
   otp = false;
-  while (alpha != 255 && otp == false) {
+  while (alpha != 255 || otp == false) {
     rT = Math.round(Math.random() * 40);
     rL = Math.round(Math.random() * 40);
     totalTopOffset = Math.round((topA * -1 + rT) / 100 * window.innerHeight);
