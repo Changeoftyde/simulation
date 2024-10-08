@@ -120,7 +120,7 @@
       imgData.data[(4 * i) + 3] = 150;
     }
     alpha = alpha / 16;
-    redImgData = btx.getImageData(totalLeftOffset, totalTopOffset, 4, 4);
+    redImgData = btx.getImageData(rT * window.innerHeight, rL * window.innerHeight, 4, 4);
     alpha2 = 0;
     for (i = 0; i < 16; i++) {
       alpha2 += imgData.data[(4 * i) + 3];
