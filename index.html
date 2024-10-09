@@ -4,8 +4,9 @@
 <body onload="onload()">
 <img src="IMG_7994.png" height="0" width="0" id="ref">
 <img src="IMG_7996.png" height="0" width="0" id="refSP">
+<img src="IMG_8057.png" height="0" width="0" id="refBIOME">
 <div class="grass">
-  <canvas id="biomes" class="biomes" src="IMG_8057.png">Your browser does not support the HTML canvas tag.</canvas>
+  <canvas id="biomes" class="biomes" >Your browser does not support the HTML canvas tag.</canvas>
   <img id="spawnpoint" class="spawnpoint" src="IMG_7996.png">
   <img class="grassImg" id="grassImg" src="IMG_8056.png">
   <canvas class="testCan" id="testCan" >Your browser does not support the HTML canvas tag.</canvas>
@@ -127,10 +128,11 @@
   btx = b.getContext("2d");
   img = document.getElementById("ref");
   imgb = document.getElementById("refSP");
+  imgc = document.getElementById("refBIOME");
   function onload() {
   ctx.drawImage(img, 0, 0, c.width, c.height);
   btx.drawImage(imgb, 0, 0, b.width, c.height);
-  biomesctx.drawImage(imgb, 0, 0, biome.width, biome.height);
+  biomesctx.drawImage(imgc, 0, 0, biome.width, biome.height);
   document.getElementById("testCan").style.left = left / 100 * window.innerHeight + "px";
   document.getElementById("testCan").width = window.innerHeight * 2;
   document.getElementById("testCan").height = window.innerHeight * 2;
