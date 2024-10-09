@@ -6,9 +6,9 @@
 <img src="IMG_7996.png" height="0" width="0" id="refSP">
 <img src="IMG_8057.png" height="0" width="0" id="refBIOME">
 <div class="grass">
-  <canvas id="biomes" class="biomes" >Your browser does not support the HTML canvas tag.</canvas>
   <img id="spawnpoint" class="spawnpoint" src="IMG_7996.png">
   <img class="grassImg" id="grassImg" src="IMG_8056.png">
+  <canvas id="biome" class="biome" >Your browser does not support the HTML canvas tag.</canvas>
   <canvas class="testCan" id="testCan" >Your browser does not support the HTML canvas tag.</canvas>
   <canvas id="planetSize">Your browser does not support the HTML canvas tag.</canvas>
 </div>
@@ -21,7 +21,7 @@
     position: fixed;
     z-index: 4;
   }
-  .biomes {
+  .biome {
     width: 200vh;
     height: 200vh;
     position: absolute;
@@ -85,12 +85,12 @@
   document.getElementById("testCan").height = window.innerHeight * 2;
   document.getElementById("testCan").style.width = window.innerHeight * 2 + "px";
   document.getElementById("testCan").style.height = window.innerHeight * 2 + "px";
-  document.getElementById("biomes").style.top = topA / 100 * window.innerHeight + "px";
-  document.getElementById("biomes").style.left = left / 100 * window.innerHeight + "px";
-  document.getElementById("biomes").width = window.innerHeight * 2;
-  document.getElementById("biomes").height = window.innerHeight * 2;
-  document.getElementById("biomes").style.width = window.innerHeight * 2 + "px";
-  document.getElementById("biomes").style.height = window.innerHeight * 2 + "px";
+  document.getElementById("biome").style.top = topA / 100 * window.innerHeight + "px";
+  document.getElementById("biome").style.left = left / 100 * window.innerHeight + "px";
+  document.getElementById("biome").width = window.innerHeight * 2;
+  document.getElementById("biome").height = window.innerHeight * 2;
+  document.getElementById("biome").style.width = window.innerHeight * 2 + "px";
+  document.getElementById("biome").style.height = window.innerHeight * 2 + "px";
   document.getElementById("planetSize").style.width = window.innerHeight * 0.4 + "px";
   document.getElementById("planetSize").style.height = window.innerHeight * 0.4 + "px";
   document.getElementById("planetSize").width = window.innerHeight * 0.4;
@@ -106,25 +106,25 @@
   document.getElementById("testCan").height = window.innerHeight * 2;
   document.getElementById("testCan").style.width = window.innerHeight * 2 + "px";
   document.getElementById("testCan").style.height = window.innerHeight * 2 + "px";
-  document.getElementById("biomes").style.top = topA / 100 * window.innerHeight + "px";
-  document.getElementById("biomes").style.left = left / 100 * window.innerHeight + "px";
-  document.getElementById("biomes").width = window.innerHeight * 2;
-  document.getElementById("biomes").height = window.innerHeight * 2;
-  document.getElementById("biomes").style.width = window.innerHeight * 2 + "px";
-  document.getElementById("biomes").style.height = window.innerHeight * 2 + "px";
+  document.getElementById("biome").style.top = topA / 100 * window.innerHeight + "px";
+  document.getElementById("biome").style.left = left / 100 * window.innerHeight + "px";
+  document.getElementById("biome").width = window.innerHeight * 2;
+  document.getElementById("biome").height = window.innerHeight * 2;
+  document.getElementById("biome").style.width = window.innerHeight * 2 + "px";
+  document.getElementById("biome").style.height = window.innerHeight * 2 + "px";
   document.getElementById("planetSize").style.width = window.innerHeight * 0.4 + "px";
   document.getElementById("planetSize").style.height = window.innerHeight * 0.4 + "px";
   document.getElementById("planetSize").width = window.innerHeight * 0.4;
   document.getElementById("planetSize").height = window.innerHeight * 0.4;
     ctx.drawImage(img, 0, 0, c.width, c.height);
     btx.drawImage(imgb, 0, 0, b.width, b.height);
-    biomesctx.drawImage(imgc, 0, 0, biome.width, biome.height);
+    biomectx.drawImage(imgc, 0, 0, biome.width, biome.height);
   });
   c = document.getElementById("testCan");
   b = document.getElementById("planetSize");
-  biome = document.getElementById("biomes");
+  biome = document.getElementById("biome");
   ctx = c.getContext("2d");
-  biomesctx = biome.getContext("2d");
+  biomectx = biome.getContext("2d");
   btx = b.getContext("2d");
   img = document.getElementById("ref");
   imgb = document.getElementById("refSP");
@@ -132,7 +132,7 @@
   function onload() {
   ctx.drawImage(img, 0, 0, c.width, c.height);
   btx.drawImage(imgb, 0, 0, b.width, c.height);
-  biomesctx.drawImage(imgc, 0, 0, biome.width, biome.height);
+  biomectx.drawImage(imgc, 0, 0, biome.width, biome.height);
   document.getElementById("testCan").style.left = left / 100 * window.innerHeight + "px";
   document.getElementById("testCan").width = window.innerHeight * 2;
   document.getElementById("testCan").height = window.innerHeight * 2;
