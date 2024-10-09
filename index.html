@@ -11,8 +11,18 @@
   <canvas id="planetSize">Your browser does not support the HTML canvas tag.</canvas>
 </div>
 <div class="spaceBack"></div>
-
+<textarea id="input" class="codeSpace" placeholder="Type 'Create World' to begin..."></textarea>
 <style>
+  .codeSpace {
+    width: 100%;
+    height: 30%;
+    top: 70%;
+    left: 0;
+    position: fixed;
+    background-color: white;
+    color: #0b0823;
+    font-size: 10vw;
+  }
   .spaceBack {
     background-image: url("IMG_8059.png");
     background-size: cover;
@@ -150,6 +160,12 @@
   document.getElementById("planetSize").style.opacity = 0;
   }, 500);
   }
+  input = document.getElementById("input");
+  input.addEventListener("keydown", function() {
+  if (event.key === "Enter") {
+    
+  }
+  });
 </script>
 </body>
 </html>
