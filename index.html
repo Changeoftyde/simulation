@@ -183,7 +183,7 @@
   input = document.getElementById("input");
   input.addEventListener("keydown", function() {
   if (event.key === "Enter") {
-    newCode = input.value.substring(originalCode.length + 1);
+    newCode = input.value.substring(originalCode.length);
     originalCode = input.value;
     if (newCode.toLowerCase() == "create world") {
       setTimeout(createWorld, 0);
