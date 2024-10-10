@@ -194,9 +194,11 @@
     phaser = document.getElementById("phaser");
     for (i = 2; i < 25; i++) {
       if (i == 24) {
+        setTimeout(function() {
         phaser.style.opacity = 0;
         phaser.style.zIndex = -400;
         break;
+        }, 2200)
       }
       setTimeout(function() {
         phaser.src = "Phase ".concat(i.toString(), ".png");
