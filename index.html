@@ -5,6 +5,7 @@
 <img src="IMG_8058.png" height="0" width="0" id="ref">
 <img src="IMG_7996.png" height="0" width="0" id="refSP">
 <div class="grass">
+  <img id="phaser" src="Phase 1.png" class="phaser">
   <img id="spawnpoint" class="spawnpoint" src="IMG_7996.png">
   <img class="grassImg" id="grassImg" src="IMG_8056.png">
   <canvas class="testCan" id="testCan" >Your browser does not support the HTML canvas tag.</canvas>
@@ -13,6 +14,14 @@
 <div class="spaceBack"></div>
 <textarea id="input" class="codeSpace" placeholder="Type 'Create World' to begin..."></textarea>
 <style>
+  .phaser {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 40vh;
+    height: 40vh;
+    opacity: 1;
+  }
   .codeSpace {
     width: 100%;
     height: 30%;
@@ -169,12 +178,29 @@
   document.getElementById("planetSize").style.opacity = 0;
   }, 500);
   }
+  originalCode = "";
   input = document.getElementById("input");
   input.addEventListener("keydown", function() {
   if (event.key === "Enter") {
-    
-  }
+    newCode = input.value.substring(originalCode.length + 1);
+    originalCode = input.value;
+    if (newCode.toLowerCase() == "Create World") {
+      setTimeout(createWorld, 0);
+    }
   });
+  function createWorld() {
+    phaser = document.getElementById("phaser");
+    for (i = 2; i < 25; i++) {
+      if (i == 24) {
+        phaser.opacity = 0;
+        phaser.zIndex = -400;
+        break;
+      }
+      setTimeout(function() {
+        phaser.src = "Phase ".concat(i, ".png");
+      }, (i - 2) * 100);
+    }
+  }
 </script>
 </body>
 </html>
