@@ -200,10 +200,13 @@
         }, 2200)
         break;
       }
-      setTimeout(function() {
-        phaser.src = "Phase ".concat(i.toString(), ".png");
-      }, (i - 2) * 100);
+      setTimeout(nextFrame, 0, i);
     }
+  }
+  function nextFrame(frame) {
+    setTimeout(function() {
+    phaser.src = "Phase ".concat(frame.toString(), ".png");
+    }, (frame - 2) * 50);
   }
 </script>
 </body>
