@@ -182,6 +182,9 @@
   originalCode = "";
   input = document.getElementById("input");
   input.addEventListener("keydown", function() {
+  if (input.value < originalCode) {
+    input.value = originalCode;
+  }
   if (event.key === "Enter") {
     newCode = input.value.substring(originalCode.length);
     originalCode = input.value.concat("\n");
