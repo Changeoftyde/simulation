@@ -184,7 +184,7 @@
   input.addEventListener("keydown", function() {
   if (event.key === "Enter") {
     newCode = input.value.substring(originalCode.length);
-    originalCode = input.value;
+    originalCode = input.value.concat("\n");
     if (newCode.toLowerCase() == "create world") {
       setTimeout(createWorld, 0);
     }
