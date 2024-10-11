@@ -182,7 +182,7 @@
   originalCode = "";
   input = document.getElementById("input");
   input.addEventListener("keydown", function() {
-  if (input.value < originalCode) {
+  if (input.value.length < originalCode.length) {
     input.value = originalCode;
   }
   if (event.key === "Enter") {
