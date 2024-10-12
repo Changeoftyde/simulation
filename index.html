@@ -12,9 +12,8 @@
   <canvas id="planetSize">Your browser does not support the HTML canvas tag.</canvas>
 </div>
 <div class="spaceBack"></div>
-<div id="input" class="codeSpace" contenteditable="true">
-  Create World
-</div>
+<div id="input" class="codeSpace" contenteditable="true"></div>
+<div id="history" class="fileHistory"><span>File History:</span></div>
 <style>
   .phaser {
     position: absolute;
@@ -25,9 +24,25 @@
     opacity: 1;
     z-index: 10;
   }
+  .fileHistory {
+    width: 101%;
+    height: 20%;
+    overflow: hidden;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.15vw;
+    top: 80%;
+    left: -0.15%;
+    position: fixed;
+    background-color: white;
+    color: #0b0822;
+    font-size: 3vh;
+    font-family: AnkaCoder;
+    overflow-y: auto;
+  }
   .codeSpace {
     width: 101%;
-    height: 30%;
+    height: 10%;
     overflow: hidden;
     border-style: solid;
     border-color: white;
@@ -37,7 +52,7 @@
     position: fixed;
     background-color: #0b0822;
     color: white;
-    font-size: 2.5vw;
+    font-size: 3vh;
     font-family: AnkaCoder;
   }
   .spaceBack {
@@ -181,22 +196,43 @@
   document.getElementById("planetSize").style.opacity = 0;
   }, 500);
   }
+  numOfTimes = 0;
   originalCode = "";
+  hasBeenCreated = false;
+  history = document.getElementById("history");
   input = document.getElementById("input");
   input.addEventListener("keydown", function() {
   if (event.key === "Enter") {
-    newCode = input.innerHTML.substring(originalCode.length);
-    originalCode = input.innerHTML.concat("\n");
-    if (newCode.toLowerCase() == "create world") {
-      setTimeout(createWorld, 0);
-      newSpan = document.createElement("span");
-      newSpan.style.color = "green";
-      newSpan.innerHTML = newCode;
-      newSpan.contenteditable = "false";
-      input.appendChild(newSpan);
+    newCode = input.textContent;
+    input.innerHTML = "";
+    if (newCode.toLowerCase() == "create world" && hasBeenCreated == false) {
+      hasBeenCreated = true;
+      addHistory("green");
+      createWorld();
+    } else {
+      if (newCode != "" && newCode.toLowerCase() != "create world") {
+      newCode = "\"" + newCode + "\"" + ": Command Not Found";
+      } else if (newCode.toLowerCase() == "create world") {
+      newCode = "World Already Created."
+      } else {
+      newCode = "Please input a Command.";
+      }
+      addHistory("red");
     }
   }
   });
+  function addHistory(cool) {
+    if (cool == "green") {
+      newCode = "\"" + newCode + "\": Command Ran Successfully";
+    }
+    fileHistory = document.getElementById("history");
+    newSpan = document.createElement("span");
+    newBreak = document.createElement("br");
+    newSpan.style.color = cool;
+    newSpan.innerHTML = newCode;
+    fileHistory.appendChild(newBreak);
+    fileHistory.appendChild(newSpan);
+  }
   function createWorld() {
     phaser = document.getElementById("phaser");
     for (i = 2; i < 25; i++) {
