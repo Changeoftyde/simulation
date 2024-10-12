@@ -13,6 +13,7 @@
 </div>
 <div class="spaceBack"></div>
 <div id="input" class="codeSpace" contenteditable="true">
+  Create World
 </div>
 <style>
   .phaser {
@@ -183,14 +184,16 @@
   originalCode = "";
   input = document.getElementById("input");
   input.addEventListener("keydown", function() {
-  if (input.innerHTML.length < originalCode.length) {
-    input.innerHTML = originalCode;
-  }
   if (event.key === "Enter") {
     newCode = input.innerHTML.substring(originalCode.length);
     originalCode = input.innerHTML.concat("\n");
     if (newCode.toLowerCase() == "create world") {
       setTimeout(createWorld, 0);
+      newSpan = document.createElement("span");
+      newSpan.style.color = "green";
+      newSpan.innerHTML = newCode;
+      newSpan.contenteditable = "false";
+      input.appendChild(newSpan);
     }
   }
   });
