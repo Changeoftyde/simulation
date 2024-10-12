@@ -183,12 +183,12 @@
   originalCode = "";
   input = document.getElementById("input");
   input.addEventListener("keydown", function() {
-  if (input.value.length < originalCode.length) {
-    input.value = originalCode;
+  if (input.innerHTML.length < originalCode.length) {
+    input.innerHTML = originalCode;
   }
   if (event.key === "Enter") {
-    newCode = input.value.substring(originalCode.length);
-    originalCode = input.value.concat("\n");
+    newCode = input.innerHTML.substring(originalCode.length);
+    originalCode = input.innerHTML.concat("\n");
     if (newCode.toLowerCase() == "create world") {
       setTimeout(createWorld, 0);
     }
