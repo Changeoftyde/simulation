@@ -3,6 +3,7 @@
 <html>
 <body onload="onload()">
 <img src="IMG_8058.png" height="0" width="0" id="ref">
+<img src="IMG_8290.png" height="0" width="0" id="imgf">
 <img src="IMG_7996.png" height="0" width="0" id="refSP">
 <div class="grass">
   <img id="phaser" src="Phase 1.png" class="phaser">
@@ -250,6 +251,44 @@
     setTimeout(function() {
     phaser.src = "Phase ".concat(frame.toString(), ".png");
     }, (frame - 2) * 50);
+  }
+  function createPeople() {
+    fc = document.createElement("div");
+    fc1 = document.createElement("img");
+    fc2 = document.createElement("div");
+    fc3 = document.createElement("canvas");
+    fc.appendChild(fc1);
+    fc.appendChild(fc2);
+    fc.appendChild(fc3);
+    imgf = document.getElementById("imgf");
+    fc.style.position = "absolute";
+    fc.style.width = 7.5 + "%";
+    fc.style.height = "auto";
+    fc.style.top = rT / 40 * 100 + "%";
+    fc.style.left = rL / 40 * 100 + "%";
+    fc.style.zIndex = 7;
+    fc1.style.position = "absolute";
+    fc1.style.width = 100 + "%";
+    fc1.style.height = 100 + "%";
+    fc1.style.top = 0 + "%";
+    fc1.style.left = 0 + "%";
+    fc1.style.zIndex = 3;
+    fc1.src = "IMG_8291.png";
+    fc2.style.position = "absolute";
+    fc2.style.width = 100 + "%";
+    fc2.style.height = 50 + "%";
+    fc2.style.top = 0 + "%";
+    fc2.style.left = 0 + "%";
+    fc3.innerHTML = "Your browser does not support the HTML canvas tag.";
+    fc3.style.position = absolute;
+    fc1.style.width = 100 + "%";
+    fc1.style.height = 100 + "%";
+    fc1.style.top = 0 + "%";
+    fc1.style.left = 0 + "%";
+    fc1.style.zIndex = 2;
+    fctx = fc3.getContext("2d");
+    fctx.drawImage(imgf, 0, 0, fc3.width, fc3.height);
+    document.getElementsByClassName("grass")[0].appendChild(fc);
   }
 </script>
 </body>
