@@ -263,6 +263,7 @@
     fc.appendChild(fc3);
     imgf = document.getElementById("imgf");
     fc.style.position = "absolute";
+    fc.styie.tranform = "translate(-50%, -50%)";
     fc.style.width = 7.5 + "%";
     fc.style.height = 24 + "%";
     fc.style.top = rT / 40 * 100 + "%";
@@ -282,10 +283,10 @@
     fc2.style.left = 0 + "%";
     fc3.innerHTML = "Your browser does not support the HTML canvas tag.";
     fc3.style.position = "absolute";
-    fc1.style.width = 100 + "%";
-    fc1.style.height = 100 + "%";
-    fc1.style.top = 0 + "%";
-    fc1.style.left = 0 + "%";
+    fc3.style.width = 100 + "%";
+    fc3.style.height = 100 + "%";
+    fc3.style.top = 0 + "%";
+    fc3.style.left = 0 + "%";
     fc1.style.zIndex = 2;
     fctx = fc3.getContext("2d");
     fctx.drawImage(imgf, 0, 0, fc3.width, fc3.height);
