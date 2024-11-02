@@ -119,6 +119,9 @@
     font-family: AnkaCoder;
     src: url("graphicpixel.ttf");
   }
+  .translate {
+    tranform: translate(-50%, -50%);
+  }
 </style>
 
 <script>
@@ -263,7 +266,7 @@
     fc.appendChild(fc3);
     imgf = document.getElementById("imgf");
     fc.style.position = "absolute";
-    fc.styie.tranform = "translate(-50%, -50%)";
+    fc.classList.add("translate");
     fc.style.width = 7.5 + "%";
     fc.style.height = 24 + "%";
     fc.style.top = rT / 40 * 100 + "%";
