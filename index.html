@@ -143,14 +143,7 @@
   document.getElementById("planetSize").width = window.innerHeight * 0.4;
   document.getElementById("planetSize").height = window.innerHeight * 0.4;
   window.addEventListener("resize", function() {
-    if (peopleBeenCreated == true) {
-    fc3.style.width = window.innerHeight * 0.14 + "px";
-    fc3.style.height = window.innerHeight * 0.48 + "px";
-    fc3.width = window.innerHeight * 0.14;
-    fc3.height = window.innerHeight * 0.48;
-    fc3.style.top = 0 + "%";
-    fc3.style.left = 0 + "%";
-    }
+
     document.getElementById("grassImg").style.top = topA / 100 * window.innerHeight + "px";
     document.getElementById("grassImg").style.left = left / 100 * window.innerHeight + "px";
     document.getElementById("grassImg").style.width = window.innerHeight * 2 + "px";
