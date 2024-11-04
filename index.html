@@ -115,13 +115,13 @@
     height: 40vh;
     opacity: 1;
   }
-  @font-face {
-    font-family: AnkaCoder;
-    src: url("graphicpixel.ttf");
-  }
   .fc {
     position: absolute;
     tranform: translate(-50%, -50%);
+  }
+  @font-face {
+    font-family: AnkaCoder;
+    src: url("graphicpixel.ttf");
   }
 </style>
 
@@ -270,12 +270,12 @@
     fc.appendChild(fc3);
     imgf = document.getElementById("imgf");
     fc.style.position = "absolute";
-    fc.classList.add("fc");
     fc.style.width = 14 + "%";
     fc.style.height = 48 + "%";
     fc.style.top = rT / 40 * 100 + "%";
     fc.style.left = rL / 40 * 100 + "%";
     fc.style.zIndex = 7;
+    fc.classList.add("fc");
     fc1.style.position = "absolute";
     fc1.style.width = 100 + "%";
     fc1.style.height = 100 + "%";
