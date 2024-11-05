@@ -144,6 +144,18 @@
   document.getElementById("planetSize").height = window.innerHeight * 0.4;
   window.addEventListener("resize", function() {
     if (peopleBeenCreated == true) {
+    fc1.style.position = "absolute";
+    fc1.style.width = 100 + "%";
+    fc1.style.height = 100 + "%";
+    fc1.style.top = 0 + "%";
+    fc1.style.left = 0 + "%";
+    fc1.style.zIndex = 3;
+    fc1.src = "IMG_8291.png";
+    fc2.style.position = "absolute";
+    fc2.style.width = 100 + "%";
+    fc2.style.height = 50 + "%";
+    fc2.style.top = 0 + "%";
+    fc2.style.left = 0 + "%";
     fc3.innerHTML = "Your browser does not support the HTML canvas tag.";
     fc3.style.position = "absolute";
     fc3.style.width = window.innerHeight * 0.14 + "px";
@@ -152,7 +164,7 @@
     fc3.height = window.innerHeight * 0.48;
     fc3.style.top = 0 + "%";
     fc3.style.left = 0 + "%";
-    fc1.style.zIndex = 2;
+    fc3.style.zIndex = 2;
     fctx = fc3.getContext("2d");
     fctx.drawImage(imgf, 0, 0, fc3.width, fc3.height);
     }
@@ -308,7 +320,7 @@
     fc3.height = window.innerHeight * 0.48;
     fc3.style.top = 0 + "%";
     fc3.style.left = 0 + "%";
-    fc1.style.zIndex = 2;
+    fc3.style.zIndex = 2;
     fctx = fc3.getContext("2d");
     fctx.drawImage(imgf, 0, 0, fc3.width, fc3.height);
     document.getElementsByClassName("grass")[0].appendChild(fc);
