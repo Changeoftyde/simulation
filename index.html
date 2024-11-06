@@ -144,6 +144,12 @@
   document.getElementById("planetSize").height = window.innerHeight * 0.4;
   window.addEventListener("resize", function() {
     if (peopleBeenCreated == true) {
+    fc.style.position = "absolute";
+    fc.style.width = 14 + "%";
+    fc.style.height = 48 + "%";
+    fc.style.top = rT / 40 * 100 + "%";
+    fc.style.left = rL / 40 * 100 + "%";
+    fc.style.zIndex = 7;
     fc1.style.position = "absolute";
     fc1.style.width = 100 + "%";
     fc1.style.height = 100 + "%";
